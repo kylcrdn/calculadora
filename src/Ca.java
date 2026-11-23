@@ -111,10 +111,30 @@ public class Ca {
             }
 
             /** Envía el resultado al navegador. */
-            bt = tx.getBytes(StandardCharsets.UTF_8);
+
+            String html = Files.readString(
+                    Path.of("frontend", "index.html"),
+                    StandardCharsets.UTF_8
+            );
+
+// Replace the placeholder with the calculated result
+            html = html.replace(
+                    "Aquí aparecerá el resultado.",
+                    tx
+            );
+
+// Send the HTML page to the browser
+            bt = html.getBytes(StandardCharsets.UTF_8);
+
+            ex.getResponseHeaders().set(
+                    "Content-Type",
+                    "text/html; charset=UTF-8"
+            );
+
             ex.sendResponseHeaders(200, bt.length);
             ex.getResponseBody().write(bt);
             ex.close();
+
         });
 
         /** Inicia el servidor. */
