@@ -1,0 +1,108 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+    <title>Calculadora</title>
+</head>
+
+<body>
+
+<main>
+    <h1>Calculadora</h1>
+
+    <p>
+        Introduce dos números enteros, selecciona
+        una operación y pulsa "Calcular".
+    </p>
+
+    <hr>
+
+    <form action="/calc" method="get">
+
+        <fieldset>
+            <legend>Calculadora básica</legend>
+
+            <p>
+                <label for="a">
+                    <strong>Primer número</strong>
+                </label>
+                <br>
+                <input
+                        type="number"
+                        id="a"
+                        name="a"
+                        min="-99999"
+                        max="99999"
+                        step="1"
+                        placeholder="Ej: 10"
+                        required>
+            </p>
+
+            <p>
+                <label for="op">
+                    <strong>Operación</strong>
+                </label>
+                <br>
+                <select id="op" name="op" required>
+                    <option value="" disabled selected>
+                        Selecciona una operación
+                    </option>
+                    <option value="sumar">
+                        + Sumar
+                    </option>
+                    <option value="restar">
+                        − Restar
+                    </option>
+                    <option value="multiplicar">
+                        × Multiplicar
+                    </option>
+                    <option value="dividir">
+                        ÷ Dividir
+                    </option>
+                </select>
+            </p>
+
+            <p>
+                <label for="b">
+                    <strong>Segundo número</strong>
+                </label>
+                <br>
+                <input
+                        type="number"
+                        id="b"
+                        name="b"
+                        min="-99999"
+                        max="99999"
+                        step="1"
+                        placeholder="Ej: 5"
+                        required>
+            </p>
+
+        </fieldset>
+
+        <p>
+            <button type="submit">
+                Calcular resultado
+            </button>
+
+            <button type="reset">
+                Limpiar
+            </button>
+        </p>
+
+    </form>
+
+    <hr>
+
+    <small>
+        Introduce números enteros entre
+        -99999 y 99999.
+    </small>
+
+</main>
+
+</body>
+</html>
