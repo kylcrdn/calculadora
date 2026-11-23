@@ -16,7 +16,7 @@ El siguiente historial está ordenado cronológicamente, desde el primer commit 
 | `cb550b2` | Creación del frontend de la calculadora en HTML. |
 | `a7ce54a` | Eliminación de la carpeta duplicada `src/main`. |
 | `e4382c0` | Fusión del frontend con main. |
-| `0ab32ef` | Creación de la clase Java `Ca.java`. |
+| `0ab32ef` | Creación de la clase Java `Calculadora.java`. |
 | `d3bec89` | Fusión del backend con main. |
 | `19f9963` | Corrección de la ruta del frontend para comunicar HTML con Java. |
 | `7ca51c0` | Incorporación de una sección para mostrar el resultado en la misma página. |
