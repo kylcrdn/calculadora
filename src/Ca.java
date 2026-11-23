@@ -65,7 +65,7 @@ public class Ca {
 
         /** Muestra el formulario HTML. */
         sv.createContext("/", ex -> {
-            bt = Files.readAllBytes(Path.of("index.html"));
+            bt = Files.readAllBytes(Path.of("frontend","index.html"));
             ex.sendResponseHeaders(200, bt.length);
             ex.getResponseBody().write(bt);
             ex.close();
@@ -119,6 +119,7 @@ public class Ca {
 
         /** Inicia el servidor. */
         sv.start();
-
+        System.out.println("Servidor iniciado correctamente.");
+        System.out.println("Abre http://localhost:8080");
     }
 }
